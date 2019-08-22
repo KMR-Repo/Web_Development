@@ -11,6 +11,10 @@ function Reg_Exp()
     {
         alert("Error in regular Expression");
     }
+    else
+    {
+        alert("Valid Expression");
+    }
     /*
     var Test1 = test.match(/^null|[.?]*$/);
     console.log(test);
