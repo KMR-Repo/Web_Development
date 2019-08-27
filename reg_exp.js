@@ -4,8 +4,10 @@ function Reg_Exp()
     //var sRegExp = "Test";
     var test = 'ABC';
     //console.log(test[0]);
-    var sMatch = /^[A-Za-z0-9.?]*$/;
-    var test = ("." + sRegExp.match(sMatch)).match(/^[.?]*$|^\.null$/);
+    //var sMatch = /^[A-Za-z0-9.?]*$/;
+    //var test = ("." + sRegExp.match(sMatch)).match(/^[.?]*$|^\.null$/);
+var sMatch = (?=.*?[A-Za-z0-9])(?=.*[.*]).+
+var test = sRegExp.match(sMatch);
     console.log(test);
     if(test != null)
     {
