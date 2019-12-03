@@ -1,0 +1,3 @@
+step 1: On click of booklet 
+    Put anonymous function in body tag 
+        this anonymous function will call the .js which will be present in the local file
