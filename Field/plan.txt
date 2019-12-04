@@ -1,3 +1,13 @@
 step 1: On click of booklet 
     Put anonymous function in body tag 
         this anonymous function will call the .js which will be present in the local file
+
+connect.js will establish connection to DB usin
+
+
+1. Click 'Button'
+2. Button will call connect.js
+3. Connect.js will establish connection to DB
+	3.1 using cmd.exe
+4. Connect.js also put an anonymous function in the webpage
+5. Now on click of any place anonymous function will call runsql.js to get data back
