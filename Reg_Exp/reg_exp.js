@@ -1,3 +1,32 @@
+function Decimal_Calc()
+{
+    var input = document.getElementById("Input").value;
+    var sregExp = new RegExp;
+    sregExp = /^[0-9.]*$/;
+    var test = input.match(sregExp);
+    //console.log("KMR" + input.match(/^(?=K.)(?=M.)(?=R.)$/));
+    if (test == null)
+    {
+        document.getElementById("Output_UI").innerHTML = "00.00";
+        alert("Data should be digit");
+    }
+    else 
+    {
+        sregExp = /^\d+(\.\d{1,2})?$/;
+        test = input.match(sregExp);
+        if(test == null)
+        {
+            document.getElementById("Output_UI").innerHTML = "00.00";
+            alert("Only 2 digits allowed in input");
+        }
+        else
+            document.getElementById("Output_UI").innerHTML = input;
+    }
+    console.log(test);
+    return ;
+}
+
+/*
 function Reg_Exp()
 {
     var sRegExp = document.getElementById("Input").value
@@ -33,5 +62,5 @@ function Reg_Exp()
     {
         console.log("null");
     }
-    */
 }
+*/
