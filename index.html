@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Blink Blink</title>
     </head>
-    <body style="background-color:black;" onmousemove="KMR_Magic()" onload="add_elements()" onclick="Happy_New_Year()">
+    <body style="background-color:black;" onmousemove="KMR_Magic()" onload="confirm_elements()" onclick="Happy_New_Year()">
         <center>
             <div id="div_tag"></div>
         </center>
@@ -17,12 +17,18 @@
             crossorigin="anonymous">
         </script>
         <script>
+            function confirm_elements()
+            {
+                var magic_confirm = confirm("somthing Somthing");
+                if (magic_confirm)
+                add_elements();
+            }
             function add_elements ()
             {
                 var sInnerHTML = "";
-                for(l=1; l<=30; l++)
+                for(l=1; l<=20; l++)
                 {
-                    for(p=1; p<=30; p++)
+                    for(p=1; p<=20; p++)
                     sInnerHTML += '<span id="l' + l + 'p' + p + '"></span>';
                     sInnerHTML += '</br>';
                 }
@@ -40,9 +46,9 @@
                         return ("rgb(" + this.random() + "," + this.random() + "," + this.random() + ")");
                     }
                 };
-                for(i=1; i<=30; i++)
+                for(i=1; i<=20; i++)
                 {
-                    for(j=1; j<=30 ; j++)
+                    for(j=1; j<=20 ; j++)
                     {
                         var postion = "#l" + i + "p" + j;
                         $(postion).text("\u273A");
