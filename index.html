@@ -29,9 +29,9 @@
             function add_elements ()
             {
                 var sInnerHTML = "";
-                for(l=1; l<=10; l++)
+                for(l=1; l<=15; l++)
                 {
-                    for(p=1; p<=10; p++)
+                    for(p=1; p<=15; p++)
                     sInnerHTML += '<span id="l' + l + 'p' + p + '"></span>';
                     sInnerHTML += '</br>';
                 }
@@ -54,7 +54,7 @@
                     for(j=1; j<=10 ; j++)
                     {
                         var postion = "#l" + i + "p" + j;
-                        $(postion).text("\u273A");
+                        $(postion).text(" " + "\u273A" + " ");
                         $(postion).css("color",color.rgb());
                     }
                 }     
