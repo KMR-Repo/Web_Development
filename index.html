@@ -1,0 +1,59 @@
+<!-- Random script try in browser-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Blink Blink</title>
+    </head>
+    <body style="background-color:black;" onmousemove="KMR_Magic()" onload="add_elements()" onclick="Happy_New_Year()">
+        <center>
+            <div id="div_tag"></div>
+        </center>
+        <script 
+            src="https://code.jquery.com/jquery-3.4.1.min.js" 
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+            crossorigin="anonymous">
+        </script>
+        <script>
+            function add_elements ()
+            {
+                var sInnerHTML = "";
+                for(l=1; l<=30; l++)
+                {
+                    for(p=1; p<=30; p++)
+                    sInnerHTML += '<span id="l' + l + 'p' + p + '"></span>';
+                    sInnerHTML += '</br>';
+                }
+                $("#div_tag").html(sInnerHTML);
+            }
+            function KMR_Magic()
+            {
+                var color = {
+                    random : function ()
+                    {
+                        return (Math.floor(Math.random() * 255));
+                    },
+                    rgb : function ()
+                    {
+                        return ("rgb(" + this.random() + "," + this.random() + "," + this.random() + ")");
+                    }
+                };
+                for(i=1; i<=30; i++)
+                {
+                    for(j=1; j<=30 ; j++)
+                    {
+                        var postion = "#l" + i + "p" + j;
+                        $(postion).text("\u273A");
+                        $(postion).css("color",color.rgb());
+                    }
+                }     
+            }
+            function Happy_New_Year()
+            {
+                alert("Happy New Year !!!!!");
+            }
+        </script>
+    </body>
+</html>
