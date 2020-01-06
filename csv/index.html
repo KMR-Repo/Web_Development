@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var headers;
+
+        function csvJSON(csv){
+
+            
+            var lines=csv.split("\n");
+            var result = [];
+
+            headers=lines[0].split(",");
+
+            var arr_test = [];
+            arr_test[headers[0]] = 'Muthu';
+            console.log(arr_test[headers[0]]);
+
+            for(var i=1;i<lines.length;i++){
+
+                var arr = [];
+                var currentline=lines[i].split(",");
+                if (currentline.length < 3)
+                    continue;
+                //console.log(currentline.length);
+                for(var j=0;j<headers.length;j++){
+                    arr[j] = currentline[j];
+                }
+                result.push(arr);
+            }
+
+        return result;
+        }
+
+        var csvData = 'head1,head2,head3\ndata11,data13\ndata21,data22,data23\ndata31,data32,data33'
+        var result = csvJSON(csvData);
+        
+        console.log(result);
+        //console.log(result[0].head1);
+        var test = headers[0];
+
+        console.log();
+        //console.log(result[0].);
+    </script>
+</body>
+</html>
