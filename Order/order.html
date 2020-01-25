@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Page</title>
+    <script src="order.js"></script>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <center>
+            <table>
+                <tr>
+                    <td><input name="item" type="checkbox" onclick="onCheck('Corn1')" id="Corn1"/></td>
+                    <td><span width="40px">Corn1</span></td>
+                    <td><input type="number" min="0" value='0' id="Corn1Count"/></td>
+                </tr>
+                <tr>
+                    <td><input name="item" type="checkbox" onclick="onCheck('Corn2')" id="Corn2"/></td>
+                    <td><span width="40px">Corn2</span></td>
+                    <td><input type="number" min="0" value='0' id="Corn2Count"/></td>
+                </tr>
+                <tr>
+                    <td><input name="item" type="checkbox" onclick="onCheck('Corn3')" id="Corn3"/></td>
+                    <td><span width="40px">Corn3</span></td>
+                    <td><input type="number" min="0" value='0' id="Corn3Count"/></td>
+                </tr>
+                <tr>
+                    <td><input name="item" type="checkbox" onclick="onCheck('Corn4')" id="Corn4"/></td>
+                    <td><span width="40px">Corn4</span></td>
+                    <td><input type="number" min="0" value='0' id="Corn4Count"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="displayDetails()">display</button></td>
+                    <td><button onclick="orderDetails()">Order</button></td>
+                </tr>
+            </table>
+        </center>
+    </div>  
+</body>
+</html>
