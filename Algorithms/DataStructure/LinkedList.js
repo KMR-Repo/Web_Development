@@ -35,7 +35,9 @@ class LikedList{
         else{
             let curentNode = this.Head;
             //console.log(curentNode);
-            while(curentNode.Next != ""){
+            while(curentNode.Next != ""){//this loop is not needed if i have one 
+                //more property on the LikedList Obj which will always point to end of the Linked List 
+                //'this.Tail.next = newNode; this.Tail = newNode
                 curentNode = curentNode.Next;
             }
             curentNode.Next = new Node(sData);
