@@ -1,0 +1,8 @@
+Loosly Typed Language :
+    https://www.computerhope.com/jargon/l/looslang.htm
+
+Primitive Data Types :
+    https://developer.mozilla.org/en-US/docs/Glossary/Primitive
+
+Data Structure and Algorithms:
+    https://github.com/trekhleb/javascript-algorithms
