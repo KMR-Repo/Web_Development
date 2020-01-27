@@ -29,6 +29,25 @@ class Queue{
     }
 }
 
+class Stack{
+    constructor(){
+        this.Head = null;
+        this.Tail = null;
+    }
+    push(sData){
+        if(this.Head == null)
+            this.Tail = (this.Head = new Node(sData));
+        else
+            this.Tail = (this.Tail.Next = new Node(sData));
+        return this.Tail;
+    }
+    pop(){
+        let sData = this.Head;
+        this.Head = this.Head.Next;
+        return sData;
+    }
+}
+
 let queueFunction = ()=>{
     let firstQueue = new Queue();
     firstQueue.Add(10);
@@ -38,4 +57,18 @@ let queueFunction = ()=>{
     ///Iyyyo ... This also worked !!!!!!!!!!!!!!!!!!!!
     console.log(firstQueue.remove());
     console.log(firstQueue);
+}
+
+let stackFunction = ()=>{
+    let firstStack = new Stack;
+    firstStack.push(10);
+    //console.log(firstStack);
+    with(firstStack){
+        push(20);
+        push(30);
+        push(40);
+        push(50);
+        pop();
+    }
+    console.log(firstStack);
 }
