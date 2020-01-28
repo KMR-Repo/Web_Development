@@ -32,14 +32,20 @@ class Queue{
 class Stack{
     constructor(){
         this.Head = null;
-        this.Tail = null;
+        //this.Tail = null;
     }
     push(sData){
         if(this.Head == null)
-            this.Tail = (this.Head = new Node(sData));
-        else
-            this.Tail = (this.Tail.Next = new Node(sData));
-        return this.Tail;
+            this.Head = new Node(sData)
+            //this.Tail = (this.Head = new Node(sData));
+        else{
+            let newNode = new Node(sData);
+            [newNode.Next,this.Head] = [this.Head,newNode];
+            //newNode.Next = this.Head;
+            //this.Head = newNode;
+        }
+           // this.Tail = (this.Tail.Next = new Node(sData));
+        return this.Head;
     }
     pop(){
         let sData = this.Head;
@@ -64,11 +70,11 @@ let stackFunction = ()=>{
     firstStack.push(10);
     //console.log(firstStack);
     with(firstStack){
-        push(20);
-        push(30);
-        push(40);
-        push(50);
-        pop();
+        console.log(push(20));
+        console.log(push(30));
+        console.log(push(40));
+        console.log(push(50));
+        console.log(pop());
     }
     console.log(firstStack);
 }
