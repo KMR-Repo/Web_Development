@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Find Light BC</title>
 </head>
 <body>
-    <br>
-    <br>
-    <br>
-    <table align="center" id="table1">
-        <tr>
-            <td><input type="text" placeholder="Table Name"/></td>
-        </tr>
-        <tr>
-            <td><input id="colmnCount" type="number" min="1" placeholder="1" onchange="addInputFields()"/></td>
-        </tr>
-        <!--tr>
-            <td><input type="text" placeholder="Column Name"/></td>
-        </tr-->
-    </table>
+    <div class="wrap-contact100">
+        <table align="center" id="table1">
+            <tr>
+                <td><input class="input100" type="text" list="browsers" placeholder="Table Name"/></td>
+            </tr>
+            <tr>
+                <td><input class="input100" id="colmnCount" type="number" min="1" placeholder="1" onchange="addInputFields()"/></td>
+            </tr>
+            <tr>
+                <td align="center"><button onclick="GetBC()">Find</button></td>
+            </tr>
+        </table>
+        <datalist  id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </div>
 </body>
 </html>
