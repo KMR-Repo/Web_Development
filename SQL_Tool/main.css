@@ -1,5 +1,5 @@
 body, html {
-	height: 50%;
+	height: 100%;
     font-family: Montserrat-Regular, sans-serif;
     background: rgba(132,106,221,0.9);
 }
@@ -28,7 +28,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-right: 10%;
     padding-bottom: 10%;
     padding-left: 10%;
